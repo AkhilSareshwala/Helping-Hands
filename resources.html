@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helping Hands - Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Helping Hands</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="work.html" class="text-gray-700 hover:text-blue-600">Our Work</a>
+                <a href="involved.html" class="text-gray-700 hover:text-blue-600">Get Involved</a>
+                <a href="resources.html" class="text-gray-700 hover:text-blue-600 font-semibold">Resources</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+        <a href="index.html" class="block py-2 px-6 border-b">Home</a>
+        <a href="about.html" class="block py-2 px-6 border-b">About Us</a>
+        <a href="work.html" class="block py-2 px-6 border-b">Our Work</a>
+        <a href="involved.html" class="block py-2 px-6 border-b">Get Involved</a>
+        <a href="resources.html" class="block py-2 px-6 border-b font-semibold">Resources</a>
+        <a href="contact.html" class="block py-2 px-6">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="text-center py-28 bg-blue-600 text-white">
+        <h1 class="text-4xl font-bold">Explore Our Resources</h1>
+        <p class="mt-4 text-lg">Stay informed with our latest blogs, FAQs, galleries, and downloadable materials.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="container mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-700">Latest Blog Posts</h2>
+        <p class="text-center text-gray-600 mt-4">Read insightful articles and opinions on our focus areas.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-white p-6 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-600">Impact of Education in Rural Areas</h3>
+                <p class="text-gray-600 mt-2">Discover how education transforms communities.</p>
+                <a href="#" class="text-blue-500 mt-4 inline-block">Read More →</a>
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-600">Climate Change and Its Effect on Agriculture</h3>
+                <p class="text-gray-600 mt-2">An in-depth analysis of sustainability in farming.</p>
+                <a href="#" class="text-blue-500 mt-4 inline-block">Read More →</a>
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-600">Women Empowerment Through Skill Development</h3>
+                <p class="text-gray-600 mt-2">Stories of resilience and growth.</p>
+                <a href="#" class="text-blue-500 mt-4 inline-block">Read More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="bg-gray-100 py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-700">Frequently Asked Questions</h2>
+            <p class="text-center text-gray-600 mt-4">Find answers to common questions about our work.</p>
+            <div class="mt-8 max-w-2xl mx-auto">
+                <div class="bg-white p-4 shadow-md rounded-md mb-4">
+                    <h3 class="font-semibold text-blue-600">What does Helping Hands do?</h3>
+                    <p class="text-gray-600 mt-2">We focus on education, healthcare, and community development.</p>
+                </div>
+                <div class="bg-white p-4 shadow-md rounded-md mb-4">
+                    <h3 class="font-semibold text-blue-600">How can I contribute?</h3>
+                    <p class="text-gray-600 mt-2">You can donate, volunteer, or spread awareness about our initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="container mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-700">Gallery</h2>
+        <p class="text-center text-gray-600 mt-4">Explore images and videos from our recent events and projects.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <img src="https://via.placeholder.com/300" class="rounded-lg shadow-md" alt="Gallery Image">
+            <img src="https://via.placeholder.com/300" class="rounded-lg shadow-md" alt="Gallery Image">
+            <img src="https://via.placeholder.com/300" class="rounded-lg shadow-md" alt="Gallery Image">
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section class="bg-gray-100 py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-700">Downloads</h2>
+            <p class="text-center text-gray-600 mt-4">Access reports, brochures, and resources.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-white p-6 shadow-md rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-600">Annual Report 2024</h3>
+                    <a href="#" class="text-blue-500 mt-4 inline-block">Download PDF →</a>
+                </div>
+                <div class="bg-white p-6 shadow-md rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-600">Volunteer Handbook</h3>
+                    <a href="#" class="text-blue-500 mt-4 inline-block">Download PDF →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-6 text-center">
+        <p>© 2024 Helping Hands. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

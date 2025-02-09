@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helping Hands - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Helping Hands</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="work.html" class="text-gray-700 hover:text-blue-600">Our Work</a>
+                <a href="involved.html" class="text-gray-700 hover:text-blue-600">Get Involved</a>
+                <a href="resources.html" class="text-gray-700 hover:text-blue-600">Resources</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+        <a href="index.html" class="block py-2 px-6 border-b font-semiboldx">Home</a>
+        <a href="about.html" class="block py-2 px-6 border-b">About Us</a>
+        <a href="work.html" class="block py-2 px-6 border-b">Our Work</a>
+        <a href="involved.html" class="block py-2 px-6 border-b">Get Involved</a>
+        <a href="resources.html" class="block py-2 px-6 border-b">Resources</a>
+        <a href="contact.html" class="block py-2 px-6">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="text-center py-28 bg-blue-500 text-white">
+        <h1 class="text-4xl font-bold">Empowering Communities for a Better Future</h1>
+        <p class="mt-4 text-lg">Join us in making a difference. Support our mission today.</p>
+        <a href="donate.html" class="mt-6 inline-block bg-yellow-400 text-blue-800 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-yellow-500">Donate Now</a>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="container mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-700">Our Mission</h2>
+        <p class="mt-4 text-center text-gray-600">
+            We strive to create positive change by providing access to education, healthcare, and resources for those in need. 
+            Our goal is to build sustainable communities where everyone has an opportunity to thrive.
+        </p>
+    </section>
+
+    <!-- Featured Programs -->
+    <section class="bg-gray-100 py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-700">Featured Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-blue-600">Education for All</h3>
+                    <p class="text-gray-600 mt-2">Providing quality education to underprivileged children to help shape a better future.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-blue-600">Healthcare Support</h3>
+                    <p class="text-gray-600 mt-2">Delivering essential medical aid and awareness to communities in need.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-blue-600">Women Empowerment</h3>
+                    <p class="text-gray-600 mt-2">Providing training and financial independence opportunities for women.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="text-center py-16 bg-blue-500 text-white">
+        <h2 class="text-3xl font-bold">Make a Difference Today</h2>
+        <p class="mt-4 text-lg">Support our initiatives by volunteering, donating, or spreading awareness.</p>
+        <a href="involved.html" class="mt-6 inline-block bg-yellow-400 text-blue-800 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-yellow-500">Get Involved</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-6 text-center">
+        <p>© 2024 Helping Hands. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
