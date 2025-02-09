@@ -11,8 +11,7 @@
 </head>
 <body class="bg-gray-50">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed w-full z-10">
+    <nav class="bg-white shadow-md fixed w-full z-20 top-0 left-0">
         <div class="container mx-auto flex justify-between items-center px-6 py-4">
             <a href="index.html" class="text-2xl font-bold text-blue-600">Helping Hands</a>
             <div class="hidden md:flex space-x-6">
@@ -21,24 +20,25 @@
                 <a href="work.html" class="text-gray-700 hover:text-blue-600 font-semibold">Our Work</a>
                 <a href="involved.html" class="text-gray-700 hover:text-blue-600">Get Involved</a>
                 <a href="resources.html" class="text-gray-700 hover:text-blue-600">Resources</a>
-                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 ">Contact</a>
             </div>
             <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none text-2xl">
                     ☰
                 </button>
             </div>
         </div>
     </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
-        <a href="index.html" class="block py-2 px-6 border-b">Home</a>
-        <a href="about.html" class="block py-2 px-6 border-b">About Us</a>
-        <a href="work.html" class="block py-2 px-6 border-b font-semibold">Our Work</a>
-        <a href="involved.html" class="block py-2 px-6 border-b">Get Involved</a>
-        <a href="resources.html" class="block py-2 px-6 border-b">Resources</a>
-        <a href="contact.html" class="block py-2 px-6">Contact</a>
+    
+    <!-- Mobile Menu (Fixed & Covers Full Screen) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white shadow-lg z-30 flex flex-col items-center justify-center">
+        <button id="close-menu" class="absolute top-4 right-6 text-3xl text-gray-700">✖</button>
+        <a href="index.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">Home</a>
+        <a href="about.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">About Us</a>
+        <a href="work.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600 font-semibold">Our Work</a>
+        <a href="involved.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">Get Involved</a>
+        <a href="resources.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">Resources</a>
+        <a href="contact.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600 ">Contact</a>
     </div>
 
     <!-- Hero Section -->
@@ -124,6 +124,17 @@
         document.getElementById('menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
+        const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
     </script>
 
 </body>
