@@ -7,10 +7,74 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chat-icon:hover {
+            background-color: #0056b3;
+        }
+
+        /* Chatbot Container */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Chatbot Header */
+        .chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .chat-header button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Chatbot Iframe */
+        .chat-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
 
+    <!-- Navbar -->
     <nav class="bg-white shadow-md fixed w-full z-20 top-0 left-0">
         <div class="container mx-auto flex justify-between items-center px-6 py-4">
             <a href="index.html" class="text-2xl font-bold text-blue-600">Helping Hands</a>
@@ -20,7 +84,7 @@
                 <a href="work.html" class="text-gray-700 hover:text-blue-600">Our Work</a>
                 <a href="involved.html" class="text-gray-700 hover:text-blue-600">Get Involved</a>
                 <a href="resources.html" class="text-gray-700 hover:text-blue-600">Resources</a>
-                <a href="contact.html" class="text-gray-700 hover:text-blue-600 ">Contact</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-gray-700 focus:outline-none text-2xl">
@@ -29,8 +93,8 @@
             </div>
         </div>
     </nav>
-    
-    <!-- Mobile Menu (Fixed & Covers Full Screen) -->
+
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden fixed inset-0 bg-white shadow-lg z-30 flex flex-col items-center justify-center">
         <button id="close-menu" class="absolute top-4 right-6 text-3xl text-gray-700">✖</button>
         <a href="index.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600 font-semibold">Home</a>
@@ -38,7 +102,7 @@
         <a href="work.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">Our Work</a>
         <a href="involved.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">Get Involved</a>
         <a href="resources.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">Resources</a>
-        <a href="contact.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600 ">Contact</a>
+        <a href="contact.html" class="block py-3 text-lg text-gray-700 hover:text-blue-600">Contact</a>
     </div>
 
     <!-- Hero Section -->
@@ -90,21 +154,46 @@
         <p>© 2024 Helping Hands. All rights reserved.</p>
     </footer>
 
+    <!-- Floating Chat Button -->
+    <div id="chat-icon" class="chat-icon">
+        💬
+    </div>
+
+    <!-- Chatbot Container -->
+    <div id="chat-container" class="chat-container">
+        <div class="chat-header">
+            Chat with us
+            <button id="close-chat">✖</button>
+        </div>
+        <iframe class="chat-iframe" src="https://www.chatbase.co/chatbot-iframe/rj1nMUltQx9MuiQDt2Ami"></iframe>
+    </div>
+
+    <!-- JavaScript for Mobile Menu -->
     <script>
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
         const menuBtn = document.getElementById('menu-btn');
-    const closeMenu = document.getElementById('close-menu');
-    const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-    });
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
 
-    closeMenu.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+         // Chatbot Toggle
+         const chatIcon = document.getElementById('chat-icon');
+        const chatContainer = document.getElementById('chat-container');
+        const closeChat = document.getElementById('close-chat');
+
+        chatIcon.addEventListener('click', function() {
+            chatContainer.style.display = 'flex'; // Show chatbot
+        });
+
+        closeChat.addEventListener('click', function() {
+            chatContainer.style.display = 'none'; // Hide chatbot
+        });
+
     </script>
 
 </body>
